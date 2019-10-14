@@ -16,13 +16,13 @@ namespace CharacterCreator.Models
         }
 
 
-        public DbSet<Characters> Features { get; set; }
+        public DbSet<Characters> Characters { get; set; }
         public DbSet<Race> Race { get; set; }
         public DbSet<Class> Class { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Characters>().ToTable("Features");
+            modelBuilder.Entity<Characters>().ToTable("Characters");
             modelBuilder.Entity<Race>().ToTable("Race");
             modelBuilder.Entity<Class>().ToTable("Class");
         }

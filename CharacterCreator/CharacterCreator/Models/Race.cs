@@ -7,7 +7,9 @@ namespace CharacterCreator.Models
 {
     public class Race
     {
-        public int Id { get; set; }
+        public int RaceId { get; set; }
         public string Name { get; set; }
+
+        public List<Characters> Characters { get; set; }
     }
 }
